@@ -1,1 +1,1 @@
-# webpack-eslint-prettier-template
+# image carousel
