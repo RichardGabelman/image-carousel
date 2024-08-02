@@ -1,6 +1,7 @@
 export class Carousel {
   static numImages = 4;
   static currImage = 1;
+  static timeoutDuration = 5000;
 
   static switchImage(index) {
     const newImage = document.querySelector(`img.idx${index}`);
@@ -22,13 +23,7 @@ export class Carousel {
     const rightArrow = document.querySelector("#arrowRight");
 
     rightArrow.addEventListener('click', () => {
-      let newIndex;
-      if (Carousel.currImage == Carousel.numImages) {
-        newIndex = 1;
-      } else {
-        newIndex = Carousel.currImage + 1;
-      }
-      Carousel.switchImage(newIndex);
+      Carousel.switchRight();
     });
 
     leftArrow.addEventListener('click', () => {
@@ -50,5 +45,19 @@ export class Carousel {
         Carousel.switchImage(index);
       });
     }
+  }
+
+  static switchRight() {
+    let newIndex;
+    if (Carousel.currImage == Carousel.numImages) {
+      newIndex = 1;
+    } else {
+      newIndex = Carousel.currImage + 1;
+    }
+    Carousel.switchImage(newIndex);
+  }
+
+  static autoSwitch() {
+    setInterval(Carousel.switchRight, Carousel.timeoutDuration);
   }
 }

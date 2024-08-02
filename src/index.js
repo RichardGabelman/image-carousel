@@ -7,3 +7,4 @@ import { Carousel } from "./modules/carousel";
 
 Carousel.setupArrows();
 Carousel.setupNavdots();
+Carousel.autoSwitch();
