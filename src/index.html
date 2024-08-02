@@ -8,7 +8,7 @@
   <body>
     <h1>Image Carousel</h1>
     <div class="center">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <svg id="arrowLeft" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <title>arrow-left</title>
         <path
           d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"
@@ -16,13 +16,13 @@
       </svg>
       <div class="pictureFrame">
         <div class="images">
-          <img class="1" src="./assets/1.jpg" alt="long exposure night sky over waterside hills">
-          <img class="2" src="./assets/2.jpg" alt="long exposure nebula">
-          <img class="3" src="./assets/3.png" alt="the earth">
-          <img class="4" src="./assets/4.jpg" alt="blue space stars">
+          <img class="idx1 active" src="<%= require('./assets/1.jpg') %>" alt="long exposure night sky over waterside hills">
+          <img class="idx2" src="<%= require('./assets/2.jpg') %>" alt="long exposure nebula">
+          <img class="idx3" src="<%= require('./assets/3.png') %>" alt="the earth">
+          <img class="idx4" src="<%= require('./assets/4.jpg') %>" alt="blue space stars">
         </div>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <svg id="arrowRight" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <title>arrow-right</title>
         <path
           d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"
@@ -30,10 +30,10 @@
       </svg>
     </div>
     <div class="navdots">
-      <div class="selected 1"></div>
-      <div class="2"></div>
-      <div class="3"></div>
-      <div class="4"></div>
+      <div class="idx1 active" data-index="1"></div>
+      <div class="idx2" data-index="2"></div>
+      <div class="idx3" data-index="3"></div>
+      <div class="idx4" data-index="4"></div>
     </div>
   </body>
 </html>

@@ -37,7 +37,7 @@ body {
 .pictureFrame {
   width: 500px;
   height: 500px;
-  border: 1px solid black;
+  border: 5px solid black;
   background-color: white;
   overflow: hidden;
 }
@@ -61,15 +61,21 @@ body {
   filter:brightness(85%);
 }
 
-div.selected {
+div.active {
   background-color: aqua;
 }
 
 .images {
   display: flex;
+  width: 2500px;
+  height: 500px;
 }
 
 .images img {
   width: 500px;
   height: 500px;
+}
+
+img.active {
+  order: -1;
 }
